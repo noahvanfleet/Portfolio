@@ -1,0 +1,77 @@
+body{
+    font-family: 'Oswald';
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+.header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row nowrap;
+    /* background-color: black; */
+}
+
+.nav-bar{
+    position: relative;
+    margin: auto auto 0;
+    
+    width: 25%;
+    min-width: 310px;
+    height: 50px;
+    border-radius: 15px;
+    /* box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1); */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: sandybrown; */
+}
+
+
+.nav-entry{
+    flex-basis: auto;
+    font-size: 20px;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 50px;
+    color: black;
+    text-align: center;
+    border-radius: 8px;
+    flex-wrap: nowrap;
+    /* box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1); */
+    justify-content: center;
+}
+
+.nav-entry:hover{
+    /* color: cyan; */
+    background-color: cyan;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sticky{
+    z-index: 1;
+    position:fixed;
+    top:0;
+    background-color: sandybrown;
+}
+
+
+/* FOR TESTING */
+#home{
+    /* background-color: black; */
+    font-size: 150px;
+}
+
+#projects{
+    /* background-color: red; */
+    font-size: 150px;
+    word-wrap: break-word;
+}
+
+#contact{
+    /* background-color: blue; */
+    font-size: 150px;
+}

@@ -56,3 +56,17 @@ function scrollObserver() {
     projectsObserver.observe(projects);
     contactObserver.observe(contact);
 }
+
+
+window.onload = function() {
+    let touch = false;
+
+    if("maxTouchPoints" in navigator) {
+        touch = navigator.maxTouchPoints > 0;
+    }
+
+    if(touch){
+        document.querySelector(".contact-foot").style.display = "none";
+        document.querySelector(".flip").style.marginTop = "-1vh";
+    }
+}

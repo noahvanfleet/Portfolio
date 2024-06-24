@@ -58,15 +58,15 @@ function scrollObserver() {
 }
 
 
-window.onload = function() {
-    let touch = false;
+// window.onload = function() {
+//     let touch = false;
 
-    if("maxTouchPoints" in navigator) {
-        touch = navigator.maxTouchPoints > 0;
-    }
+//     if("maxTouchPoints" in navigator) {
+//         touch = navigator.maxTouchPoints > 0;
+//     }
 
-    if(touch){
-        document.querySelector(".contact-foot").style.display = "none";
-        document.querySelector(".flip").style.marginTop = "-1vh";
-    }
-}
+//     if(touch){
+//         document.querySelector(".contact-foot").style.display = "none";
+//         document.querySelector(".flip").style.marginTop = "-1vh";
+//     }
+// }

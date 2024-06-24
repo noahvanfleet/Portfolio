@@ -385,25 +385,23 @@ body{
     margin-top: 2vh;
 }
 
-.contact-foot{
+/* .contact-foot{
     position: absolute;
-    /* clip-path:inset(0 30vw 0 0); */
+    clip-path:inset(0 30vw 0 0);
     overflow:hidden;
-    /* transform: translateX(-100%); */
-    /* bottom:0; */
-}
+} */
 
-@media only screen and (hover: none) and (pointer: coarse) and (max-width: 600px){
+/* @media only screen and (hover: none) and (pointer: coarse) and (max-width: 600px){
 
     .contact-foot{
         display: none;
     }
 
-    /* .flip{
+    .flip{
         margin-top:-2vh;
-    } */
+    }
 
-}
+} */
 
 
 

@@ -6,6 +6,21 @@ body{
     font-family: 'Oswald';
     background-color: #f0f0f0;
     overflow-x: hidden;
+    margin: 0;
+}
+
+.background-image {
+    position: absolute;
+    z-index: -100;
+}
+
+/* NAV ---------------------------------------------------------------------- */
+
+.logo{
+    position: absolute;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    font-size: 4vmin;
 }
 
 .header{
@@ -20,10 +35,10 @@ body{
     position: relative;
     margin: auto auto 0;
     
-    width: 25%;
-    min-width: 31vw;
+    /* width: 25%; */
+    min-width: 30vw;
     height: 5vh;
-    border-radius: 15vmax;
+    border-radius: 1vmax;
     /* box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1); */
     display: flex;
     flex-flow: row nowrap;
@@ -57,18 +72,8 @@ body{
     transition: 0.3s;
 }
 
-.sticky{
-    z-index: 1;
-    position:fixed;
-    top:0;
-    background-color: sandybrown;
-}
 
-
-.background-image{
-    position: absolute;
-    z-index: -100;
-}
+/* LANDING ---------------------------------------------------------------------- */
 
 .landing-boat{
     display:flex;
@@ -114,7 +119,6 @@ body{
 }
 
 
-
 #home{
     /* background-color: black; */
     display:flex;
@@ -123,20 +127,161 @@ body{
     font-size: 5vmin;
     height: 100vh;
     width: 100vw;
+}
 
-    /* background-image: url('background.svg');
-    background-size:cover;
-    background-position: center right;
-    background-repeat: no-repeat; */
+/* PROJECTS ---------------------------------------------------------------------- */
+#projects{
+    /* background-color: red; */
+    /* font-size: 150px; */
+    word-wrap: break-word;
+    font-size: 3vmin;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin-top: 0vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flip{
+    transform: scale(-1, -1);
+    margin-left: -1.6vw;
+}
+
+.project-title{
+    text-align: left;
+    font-size: 5vmin;
+    margin-bottom: 3vmax;
+    margin-top: 10vh;
+}
+
+.project-container{
+    display: flex;
+    /* COME BACK TO ADJUST FINAL SIZE */
+    max-width: 60vw; 
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 2vmax;
+    row-gap: 2vmax;
+    /* max-width: 500px; do this for small screens */
+    /* background-color: black; */
+}
+
+.project{
+    display:flex;
+    /* flex-basis: 0; */
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+    border-radius: 1.5vmin;
+    box-shadow: 0 .5vmin .55vmin 0 rgba(0, 0, 0, 0.1);
+    padding: 1vw 1vw;
+    /* background-color:rgba(244, 165, 96, 0.959); */
+    background-color: #e7e6e6;
+    /* min-width: 40%; */
+    width: 50vmin;
+    height: 70vmin;
+    /* background-color: black; */
+}
+
+.project-image{
+    /* width: 40vw; */
+    width:50vmin;
+    height: 40vmin;
+    border-radius: 1.5vmin;
+    max-height: 70vh;
+    transition: all 0.3s ;
+    /* background-color: black; */
+}
+
+.project-image:hover{
+    transform: scale(1.05)
+
+}
+
+.project-header{
+    display:flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: right;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    width:100%;
+    height:6vh;
+    /* margin-bottom: 0px; */
+    /* padding-bottom: 0px; */
+    /* background-color: yellow; */
+}
+
+.project-header-title{
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 1vh;
+    /* background-color: red; */
+}
+
+
+.project-header-icon{
+    width: 4vmin;
+    /* height:4vmin; */
+    /* height: auto; */
+    align-self: right;
+    padding: 0 .8vmin;
+    margin-bottom: 0px;
+    margin-top: 1vh;
+    transition: all 0.3s linear;
+    /* background-color: red; */
+}
+
+.project-tech{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0px;
+    /* background-color: purple; */
+}
+
+.project-tech-icon{
+    width:6vmin;
+    height: auto;
+    /* border-radius: 3vmin; */
+    align-self: left;
+    /* background-color: brown; */
+}
+
+.project-header-icon:hover{
+    transform: scale(1.5);
+    color:cyan;
+}
+
+.project-description{
+    text-align: left;
+    font-size: 2.3vmin;
+    /* margin-top: 1vmax; */
+    /* background-color: yellow; */
+}
+
+.project-description p{
+    /* background-color: yellowgreen; */
+    margin-bottom: auto;
+    margin-top:0px;
+}
+
+
+
+/* GLOBAL ----------------------------------------------------------------------- */
+.sticky {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    background-color: sandybrown;
 }
 
 
 /* FOR TESTING */
-#projects{
-    /* background-color: red; */
-    font-size: 150px;
-    word-wrap: break-word;
-}
 
 #contact{
     /* background-color: blue; */

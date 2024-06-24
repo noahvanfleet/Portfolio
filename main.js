@@ -27,7 +27,7 @@ function scrollObserver() {
                 document.querySelector("#homeNav").innerHTML = "Home";
             }
         });
-    }, {threshold: 0.4});
+    }, {threshold: 0.3});
 
     //Observer for Projects section
     let projects = document.querySelector("#projects");
@@ -39,7 +39,7 @@ function scrollObserver() {
                 document.querySelector("#projNav").innerHTML = "Projects";
             }
         });
-    }, {threshold: 0.4});
+    }, {threshold: 0.3});
 
     //Observer for Contact Me section
     let contact = document.querySelector("#contact");
@@ -51,7 +51,7 @@ function scrollObserver() {
                 document.querySelector("#conNav").innerHTML = "Contact Me";
             }
         });
-    }, {threshold: 0.4});
+    }, {threshold: 0.3});
 
     homeObserver.observe(home);
     projectsObserver.observe(projects);

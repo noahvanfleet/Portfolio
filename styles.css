@@ -21,9 +21,9 @@ body{
     margin: auto auto 0;
     
     width: 25%;
-    min-width: 310px;
-    height: 50px;
-    border-radius: 15px;
+    min-width: 31vw;
+    height: 5vh;
+    border-radius: 15vmax;
     /* box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1); */
     display: flex;
     flex-flow: row nowrap;
@@ -35,14 +35,16 @@ body{
 
 .nav-entry{
     flex-basis: auto;
-    font-size: 20px;
-    padding: 2px 8px;
+    /* font-size: 20px; */
+    font-size: 2vmin;
+    padding: .5vmin 1vmin;
     text-transform: uppercase;
+    text-wrap: nowrap;
     text-decoration: none;
-    line-height: 50px;
+    line-height: 5vh;
     color: black;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 8vmin;
     flex-wrap: nowrap;
     /* box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1); */
     justify-content: center;
@@ -51,7 +53,7 @@ body{
 .nav-entry:hover{
     /* color: cyan; */
     background-color: cyan;
-    border-radius: 8px;
+    border-radius: 1vmin;
     transition: 0.3s;
 }
 
@@ -60,6 +62,12 @@ body{
     position:fixed;
     top:0;
     background-color: sandybrown;
+}
+
+
+.background-image{
+    position: absolute;
+    z-index: -100;
 }
 
 .landing-boat{
@@ -79,16 +87,8 @@ body{
     line-height: 0;
 }
 
-/* .landing-name{
-    margin-bottom: 0px;
-} */
-
 #home span{
     color: rgb(15, 224, 224);
-}
-
-#home h6{
-    /* background-color: black; */
 }
 
 .landing-buttons{
@@ -96,9 +96,10 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     align-self: center;
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 3vmin;
     width:60%;
-    margin-bottom: 30px;
+    margin-bottom: 3vmax;
     /* background-color: black; */
 }
 
@@ -106,24 +107,31 @@ body{
     color:black;
     text-decoration: none;
     text-transform: uppercase;
-    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 10px 20px;
-    background-color: rgba(0, 255, 255, 0.527);
+    box-shadow: 0 .5vmin .55vmin 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2vmin;
+    padding: 1vw 2vw;
+    background-color: rgb(0, 255, 255);
 }
 
 
-/* FOR TESTING */
+
 #home{
     /* background-color: black; */
     display:flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 50px;
+    font-size: 5vmin;
     height: 100vh;
     width: 100vw;
+
+    /* background-image: url('background.svg');
+    background-size:cover;
+    background-position: center right;
+    background-repeat: no-repeat; */
 }
 
+
+/* FOR TESTING */
 #projects{
     /* background-color: red; */
     font-size: 150px;

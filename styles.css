@@ -145,7 +145,7 @@ body{
 .flip{
     transform: scale(-1, -1);
     margin-left: -1.6vw;
-    margin-top: -.01vh;;
+    margin-top: -.1vh;;
 }
 
 .project-title{

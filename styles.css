@@ -81,9 +81,6 @@ body{
     align-self: center;
     width:30%;
     height:auto;
-    /* margin-left: auto;
-    margin-right: auto; */
-    
 }
 
 .landing-text{
@@ -285,5 +282,110 @@ body{
 
 #contact{
     /* background-color: blue; */
-    font-size: 150px;
+    /* font-size: 150px; */
+    font-size: 8vmin;
+    text-align: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin-top: 2vh;
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.contact-wave{
+    transform: scaleX(-1);
+    width:100vw;
+    height: auto;
+}
+
+.contact-title{
+    margin-top:auto;
+    margin-bottom: 0px;
+    padding:0px;
+    /* background-color: yellow; */
+
+}
+
+.contact-container{
+    font-size: 3vmin;
+    display: block;
+    width: 80%;
+    max-width: 50vw;
+    height:auto;
+    margin: 10vh auto 0 auto;
+    padding: 2vmin;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 .5vmin .55vmin 0 rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    background-color: sandybrown;
+    border-radius: 1vh;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label{
+    text-align: left;
+    font-size: 2vmin;
+
+}
+
+.contact-input{
+    height:3vh;
+    border-radius: 1vmin;
+    margin-bottom: 1vh;
+    border-style: none;
+    border:none;
+    outline: none;
+    font-family: inherit;
+    font-size: 2vmin;
+    padding: 1vmin;
+}
+
+.contact-area{
+    border-radius: 1vmin;
+    margin-bottom: 1vh;
+    border-style: none;
+    border:none;
+    outline: none;
+    font-family: inherit;
+    font-size: 2vmin;
+    padding: 1vmin;
+}
+
+.contact-button{
+    border-radius: 1vmin;
+    padding: 1vmin;
+    font-size: 4vmin;
+    background-color: cyan;
+    color: black;
+    border-style: none;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.contact-button:hover{
+    background-color: rgb(15, 231, 231);
+}
+
+.flip-contact {
+    transform: scale(-1, -1);
+    margin-left:-50vw;
+}
+
+.contact-boat{
+    display: flex;
+    position: absolute;
+    margin-left: 70vw;;
+    width: 20%;
+    height: auto;
+    /* background-color: black; */
+    margin-bottom: 0px;
 }

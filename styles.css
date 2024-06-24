@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body{
@@ -7,6 +8,7 @@ body{
     background-color: #f0f0f0;
     overflow-x: hidden;
     margin: 0;
+    height: 100%;
 }
 
 .background-image {
@@ -143,6 +145,7 @@ body{
 .flip{
     transform: scale(-1, -1);
     margin-left: -1.6vw;
+    margin-top: -.01vh;;
 }
 
 .project-title{
@@ -271,7 +274,7 @@ body{
 
 /* GLOBAL ----------------------------------------------------------------------- */
 .sticky {
-    z-index: 1;
+    z-index: 100;
     position: fixed;
     top: 0;
     background-color: sandybrown;
@@ -288,6 +291,7 @@ body{
     min-height: 100vh;
     min-width: 100vw;
     margin-top: 2vh;
+    position: relative;
     /* display: flex;
     align-items: center;
     flex-direction: column; */
@@ -308,6 +312,7 @@ body{
 }
 
 .contact-container{
+    position: relative;
     font-size: 3vmin;
     display: block;
     width: 80%;
@@ -326,6 +331,7 @@ body{
 .contact-form{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .contact-label{
@@ -355,6 +361,7 @@ body{
     font-family: inherit;
     font-size: 2vmin;
     padding: 1vmin;
+    resize: none;
 }
 
 .contact-button{
@@ -378,6 +385,11 @@ body{
 .flip-contact {
     transform: scale(-1, -1);
     margin-left:-50vw;
+    margin-top: -1vh;
+}
+
+.honeypot{
+    display: none;
 }
 
 .contact-boat{
@@ -389,3 +401,52 @@ body{
     /* background-color: black; */
     margin-bottom: 0px;
 }
+
+
+.form-elements{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.overlay{
+    position:absolute;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.loader {
+    position: absolute;
+    z-index: 1000;
+    
+
+    width: 35vmin;
+    aspect-ratio: 1;
+    color: #854f1d;
+    border-radius: 50%;
+    display: grid;
+    background:
+        conic-gradient(from 90deg at 4px 4px, #0000 90deg, currentColor 0) -4px -4px/calc(50% + 2px) calc(50% + 2px),
+        radial-gradient(farthest-side, currentColor 6px, #0000 7px calc(100% - 6px), currentColor calc(100% - 5px)) no-repeat;
+    animation: l10 2s infinite linear;
+    position: relative;
+}
+
+.loader:before {
+    content: "";
+    border-radius: inherit;
+    background: inherit;
+    transform: rotate(45deg);
+}
+
+@keyframes l10 {
+    to {
+        transform: rotate(.5turn)
+    }
+}
+

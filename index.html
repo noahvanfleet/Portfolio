@@ -3,8 +3,6 @@
 <head>
     <!-- CSS file -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Main JS file -->
-    <script src="main.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +18,10 @@
 
 </head>
 <body>
+
+    <div class="overlay">
+        <div class="loader"></div>
+    </div>
 
     <!-- NAV BAR--------------------------------------------------------------------- -->
     <h1 class="logo">NVF</h1>
@@ -173,25 +175,42 @@
 
         <h1 class="contact-title">Contact Me</h1>
 
-
         <div class="contact-container">
-            <form action="#" method="POST" class="contact-form">
+            <form class="gform" action="https://script.google.com/macros/s/AKfycbyHgQ1Ikabmr4Wtjs5klflLYFZBcmI37c9uQyonEwifacDGCo9VrFtS7TvaJMi3jQdm/exec" method="POST" class="contact-form">
                 
-                <label class="contact-label" for="name">Your Name</label>
-                <input class="contact-input" type="text" id="name" name="fullName" required />
-        
-                <label class="contact-label" for="email">Your Email Address</label>
-                <input class="contact-input" type="email" id="email" name="email" required />
-        
-                <label class="contact-label" for="message">Your Message</label>
-                <textarea class="contact-area" name="message" id="message" cols="30" rows="10"></textarea>
-        
-                <button class="contact-button" type="submit">Send</button>
+                    
+                <div class="form-elements">
+                    <label class="contact-label" for="name">Your Name</label>
+                    <input class="contact-input" type="text" id="name" name="fullName" required />
+                    
+                    <label class="contact-label" for="email">Your Email Address</label>
+                    <input class="contact-input" type="email" id="email" name="email" required />
+                    
+                    <label class="contact-label" for="message">Your Message</label>
+                    <textarea class="contact-area" name="message" id="message" cols="30" rows="10"></textarea>
+                    
+                    
+                    <input class="honeypot" id="honeypot" type="text" name="honeypot" value="" />
+                    
+                    <button class="contact-button" type="submit">Send</button>
+                </div>
+
+                <div style="display:none" class="thankyou_message">
+                    <h2>
+                        Thanks for contacting me! I'll get back to you as soon as I can.
+                    </h2>
+                </div>
             </form>
         </div>
     </section>
-
+    
     <!-- FOOTER --------------------------------------------------------------------- -->
+    
+    
+    
+    <!-- Main JS files -->
+    <script src="main.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 
 
 </body>

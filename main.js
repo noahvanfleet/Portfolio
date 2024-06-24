@@ -14,8 +14,7 @@ function scrollObserver() {
         navbar.classList.remove("sticky");
     }
 
-    //CHANGE THRESHOLDS TO FIT FINAL SITE
-    // Change the navbar text based on the section in view to add boat emoji
+    // Changes the navbar text based on the section in view to add boat emoji
 
     //Observer for home section
     let home = document.querySelector("#home");

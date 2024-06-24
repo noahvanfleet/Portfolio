@@ -393,7 +393,7 @@ body{
     /* bottom:0; */
 }
 
-@media only screen and (hover: none) and (pointer: coarse) {
+@media only screen and (hover: none) and (pointer: coarse) and (max-width: 600px){
 
     .contact-foot{
         display: none;

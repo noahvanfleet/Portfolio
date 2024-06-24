@@ -270,19 +270,7 @@ body{
     margin-top:0px;
 }
 
-
-
-/* GLOBAL ----------------------------------------------------------------------- */
-.sticky {
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    background-color: sandybrown;
-}
-
-
-/* FOR TESTING */
-
+/* CONTACT ---------------------------------------------------------------------- */
 #contact{
     /* background-color: blue; */
     /* font-size: 150px; */
@@ -409,8 +397,31 @@ body{
     position: relative;
 }
 
-.overlay{
-    position:absolute;
+.contact-icon{
+    width:8vw;
+    margin-top: 2vh;
+}
+
+/* FOOTER ---------------------------------------------------------------------- */
+.footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmin;
+}
+
+
+
+/* GLOBAL ----------------------------------------------------------------------- */
+.sticky {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    background-color: sandybrown;
+}
+
+.overlay {
+    position: absolute;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -423,7 +434,7 @@ body{
 .loader {
     position: absolute;
     z-index: 1000;
-    
+
 
     width: 35vmin;
     aspect-ratio: 1;
@@ -449,4 +460,3 @@ body{
         transform: rotate(.5turn)
     }
 }
-

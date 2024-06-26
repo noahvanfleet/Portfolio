@@ -153,6 +153,11 @@ body{
     font-size: 5vmin;
     margin-bottom: 3vmax;
     margin-top: 10vh;
+    /* background-color: sandybrown; */
+    background: linear-gradient(to top, sandybrown 27%, #13CEDB 0%);
+    border-radius: 2vmin;
+    padding: 1vmin;
+    /* box-shadow: 0 .5vmin .55vmin 0 rgba(0, 0, 0, 0.1); */
 }
 
 .project-container{

@@ -57,24 +57,48 @@ function scrollObserver() {
     contactObserver.observe(contact);
 }
 
-// Modal for Sherlock Project --------------------------------------------------------
+// Modal for Projects --------------------------------------------------------
 
-let sherlockModal = document.getElementById("sherlock-modal");
-let sherlockModalClose = document.getElementById("sherlock-close");
-let sherlockModalOpen = document.getElementById("sherlock-open");
-let sherlockModalOpenTitle = document.getElementById("sherlock-title");
+let modal = document.getElementById("modal");
+let modalClose = document.getElementById("modal-close");
 
+modalClose.onclick = function () {modal.style.display = "none";};
+// -------------------------------------
 
-sherlockModalOpen.onclick = function() {
-    sherlockModal.style.display = "block";
+let sherlockOpen = document.getElementById("sherlock-open");
+let sherlockTitleOpen = document.getElementById("sherlock-title");
+
+sherlockOpen.onclick = function() {
+    modal.style.display = "block";
 }
 
-sherlockModalOpenTitle.onclick = function() {
-    sherlockModal.style.display = "block";
+sherlockTitleOpen.onclick = function() {
+    modal.style.display = "block";
 }
 
-sherlockModalClose.onclick = function() {
-    sherlockModal.style.display = "none";
+// -------------------------------------
+
+let proj2Open = document.getElementById("proj2-open");
+let proj2TitleOpen = document.getElementById("proj2-title");
+
+proj2Open.onclick = function() {
+    modal.style.display = "block";
+
+}
+proj2TitleOpen.onclick = function() {
+    modal.style.display = "block";
+}
+
+// -------------------------------------
+
+let proj3Open = document.getElementById("proj3-open");
+let proj3TitleOpen = document.getElementById("proj3-title");
+
+proj3Open.onclick = function() {
+    modal.style.display = "block";
+}
+proj3TitleOpen.onclick = function() {
+    modal.style.display = "block";
 }
 
 // -----------------------------------------------------------------------------------
@@ -82,8 +106,8 @@ sherlockModalClose.onclick = function() {
 
 // Closes the modal if the user clicks outside of it
 window.addEventListener("click", function(event) {
-    if(event.target == sherlockModal) {
-        sherlockModal.style.display = "none";
+    if(event.target == modal) {
+        modal.style.display = "none";
     }
 });
 

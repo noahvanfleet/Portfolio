@@ -276,15 +276,17 @@ body{
 }
 
 .project-image{
-    /* width: 40vw; */
     width:50vmin;
     height: 40vmin;
     /* height:auto; */
     border-radius: 1.5vmin;
     max-height: 70vh;
     transition: all 0.3s ;
-    object-fit: cover;
-    /* background-color: black; */
+    object-fit: contain;
+    cursor: pointer;
+    background-color: #13CEDB;
+    /* background-image: url("assets/sherlock-test.jpg"); */
+    
 }
 
 .project-image:hover{

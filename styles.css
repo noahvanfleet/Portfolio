@@ -144,7 +144,7 @@ body{
 }
 
 .project-modal{
-    /* display:none; */
+    display:none;
     position: fixed;
     z-index:100;
     left:0;
@@ -279,9 +279,11 @@ body{
     /* width: 40vw; */
     width:50vmin;
     height: 40vmin;
+    /* height:auto; */
     border-radius: 1.5vmin;
     max-height: 70vh;
     transition: all 0.3s ;
+    object-fit: cover;
     /* background-color: black; */
 }
 

@@ -62,8 +62,14 @@ function scrollObserver() {
 let sherlockModal = document.getElementById("sherlock-modal");
 let sherlockModalClose = document.getElementById("sherlock-close");
 let sherlockModalOpen = document.getElementById("sherlock-open");
+let sherlockModalOpenTitle = document.getElementById("sherlock-title");
+
 
 sherlockModalOpen.onclick = function() {
+    sherlockModal.style.display = "block";
+}
+
+sherlockModalOpenTitle.onclick = function() {
     sherlockModal.style.display = "block";
 }
 
@@ -84,21 +90,23 @@ window.addEventListener("click", function(event) {
 // Modal boat animation
 let boat = document.querySelector(".project-modal-boat");
 let island = document.querySelector(".project-modal-island");
-let xipos = island.getBoundingClientRect().x/window.outerWidth*100;
 
-let xpos = boat.getBoundingClientRect().left;
 
-let id = setInterval(frame, 10);
-function frame(){
-    if(xpos > xipos){
-        if(xpos > xipos+.5){
+let xpos = boat.getBoundingClientRect().left/ window.outerWidth * 100;
+let xipos;
+
+let id = setInterval(function(){
+    xipos = (island.getBoundingClientRect().x / window.outerWidth) * 100;
+    
+    if(xpos > xipos){//Does nothing when boat is at island
+        if(xpos > xipos+.5 && xipos!=0){//If boat is past island due to resize, back track
             xpos -= .25;
         }
     }else{
         xpos += .25;
     }
     boat.style.left = xpos + "vw";
-}
+}, 10);
 
 // For resize correction ------------------------
 

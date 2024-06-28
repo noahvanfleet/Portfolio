@@ -63,41 +63,66 @@ let modal = document.getElementById("modal");
 let modalClose = document.getElementById("modal-close");
 
 modalClose.onclick = function () {modal.style.display = "none";};
-// -------------------------------------
+// ------------------------------------- Sherlock Modal
 
 let sherlockOpen = document.getElementById("sherlock-open");
 let sherlockTitleOpen = document.getElementById("sherlock-title");
 
+function populateSherlockModal() {
+    let title = document.querySelector(".project-modal-title");
+
+    title.innerHTML = "Sherlock";
+}
+
 sherlockOpen.onclick = function() {
+    populateSherlockModal();
     modal.style.display = "block";
 }
 
 sherlockTitleOpen.onclick = function() {
+    populateSherlockModal();
     modal.style.display = "block";
 }
 
-// -------------------------------------
+// ------------------------------------- Project 2 Modal
 
 let proj2Open = document.getElementById("proj2-open");
 let proj2TitleOpen = document.getElementById("proj2-title");
 
+function populateProj2Modal() {
+    let title = document.querySelector(".project-modal-title");
+
+    title.innerHTML = "Project 2";
+}
+
 proj2Open.onclick = function() {
+    populateProj2Modal();
     modal.style.display = "block";
 
 }
 proj2TitleOpen.onclick = function() {
+    populateProj2Modal();
     modal.style.display = "block";
 }
 
-// -------------------------------------
+// ------------------------------------- Project 3 Modal
 
 let proj3Open = document.getElementById("proj3-open");
 let proj3TitleOpen = document.getElementById("proj3-title");
 
+function populateProj3Modal() {
+    let title = document.querySelector(".project-modal-title");
+
+    title.innerHTML = "Project 3";
+
+}
+
 proj3Open.onclick = function() {
+    populateProj3Modal();
     modal.style.display = "block";
 }
 proj3TitleOpen.onclick = function() {
+    populateProj3Modal();
     modal.style.display = "block";
 }
 

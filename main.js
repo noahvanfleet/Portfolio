@@ -97,13 +97,29 @@ function frame(){
     }else{
         xpos += .5;
     }
-    boat.style.left = xpos + "vmax";
+    boat.style.left = xpos + "vw";
 }
 
-// For resize correction
-window.addEventListener("resize", function(){
-    xipos = (island.getBoundingClientRect().x / window.outerWidth) * 100;
+// For resize correction ------------------------
+
+//Observer for when window is resized when boat is not visible
+let boatObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            xipos = (island.getBoundingClientRect().x / window.outerWidth) * 100; 
+        }
+    });
 })
+
+
+window.addEventListener("resize", function(){
+    if(boat.offsetParent != null){//Will not update here if modal is closed
+        xipos = (island.getBoundingClientRect().x / window.outerWidth) * 100;
+    }else{
+        boatObserver.observe(boat);//Observes the boat to update xipos when modal is opened
+    }
+})
+
 
 
 

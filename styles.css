@@ -161,7 +161,7 @@ body{
 .project-modal-boat{
     position: absolute;
     width: 20vmin;
-    margin-left: 0;
+    margin-left: 40;
     bottom:2vh;
     transform: scaleX(-1);
 }

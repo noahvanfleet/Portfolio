@@ -141,7 +141,7 @@ let boat = document.querySelector(".project-modal-boat");
 let island = document.querySelector(".project-modal-island");
 
 
-let xpos = boat.getBoundingClientRect().left/ window.outerWidth * 100;
+let xpos = 60;
 let xipos;
 
 let id = setInterval(function(){

@@ -92,10 +92,10 @@ let id = setInterval(frame, 10);
 function frame(){
     if(xpos > xipos){
         if(xpos > xipos+.5){
-            xpos -= .5;
+            xpos -= .25;
         }
     }else{
-        xpos += .5;
+        xpos += .25;
     }
     boat.style.left = xpos + "vw";
 }

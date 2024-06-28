@@ -140,6 +140,91 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
+
+}
+
+.project-modal{
+    /* display:none; */
+    position: fixed;
+    z-index:100;
+    left:0;
+    top:0;
+    width:100vw;
+    height: 100vh;
+    /* overflow:auto; */
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    /* background-color: rgba(0, 255, 255, 0.4); */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 30%, rgba(32, 184, 184, 0.4) 70%);
+
+}
+
+.project-modal-boat{
+    position: absolute;
+    width: 20vmin;
+    margin-left: 0;
+    bottom:2vh;
+    transform: scaleX(-1);
+}
+
+.project-modal-island{
+    height:30vmin;
+    position: absolute;
+    z-index: 0;
+    right:0;
+    bottom:0;
+}
+
+.project-modal-container{
+
+    width:60vw;
+    height: 60vh;
+    margin-top: 20vh;
+    margin-bottom: auto;
+    margin-left: 20vw;
+    margin-right: auto;
+    position: relative;
+    z-index: 10;
+    border-radius: 1.5vmin;
+    background-color: #e7e6e6;
+    /* background-color: sandybrown; */
+    box-shadow: 0 .5vmin .55vmin 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* padding: 2vmin; */
+
+}
+
+.project-modal-close{
+    float: right;
+    font-size: 5vmin;
+    font-weight: bold;
+    margin-right: 2.5vmin;
+}
+.project-modal-close:hover,
+.project-modal-close:focus {
+    cursor: pointer;
+    color: #13CEDB;
+    text-decoration: none;
+}
+
+
+.project-modal-title{
+    text-align: left;
+    font-size: 4vmin;
+    padding: 1vmin;
+    margin-top: 0px;
+    /* background-color: #13CEDB; */
+}
+
+.project-modal-content{
+    width:100%;
+    height: 100%;
+    margin-bottom: auto;
+    margin-top: -3vh;
+    /* background-color: red; */
+}
+
+.project-modal-media{
+    border-radius: 1vmin;
 }
 
 .flip{
@@ -221,7 +306,14 @@ body{
     margin-right: auto;
     margin-bottom: auto;
     margin-top: 1vh;
+    transition: all 0.3s linear;
     /* background-color: red; */
+}
+
+.project-header-title:hover {
+    color: #1fafb9;
+    cursor: pointer;
+    /* text-decoration: underline; */
 }
 
 
@@ -235,6 +327,29 @@ body{
     transition: all 0.3s linear;
     /* background-color: red; */
 }
+
+/* .project-header-icon-expand {
+    width: 4vmin;
+    height: 4vmin;
+    margin-right: 43%;
+    padding: 0 .8vmin;
+    margin-bottom: 0px;
+    margin-top: 1vh;
+    transition: all 0.3s linear;
+    background-color: red;
+    } */
+
+.project-header-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: cyan;
+}
+
+/* .project-header-icon-expand:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: cyan;
+} */
 
 .project-tech{
     display: flex;
@@ -251,11 +366,6 @@ body{
     /* background-color: brown; */
 }
 
-.project-header-icon:hover{
-    transform: scale(1.2);
-    cursor: pointer;
-    color:cyan;
-}
 
 .project-description{
     text-align: left;

@@ -57,6 +57,64 @@ function scrollObserver() {
     contactObserver.observe(contact);
 }
 
+// Modal for Sherlock Project --------------------------------------------------------
+
+let sherlockModal = document.getElementById("sherlock-modal");
+let sherlockModalClose = document.getElementById("sherlock-close");
+let sherlockModalOpen = document.getElementById("sherlock-open");
+
+sherlockModalOpen.onclick = function() {
+    sherlockModal.style.display = "block";
+}
+
+sherlockModalClose.onclick = function() {
+    sherlockModal.style.display = "none";
+}
+
+// -----------------------------------------------------------------------------------
+// General Modal Functionality
+
+// Closes the modal if the user clicks outside of it
+window.addEventListener("click", function(event) {
+    if(event.target == sherlockModal) {
+        sherlockModal.style.display = "none";
+    }
+});
+
+// Modal boat animation
+let boat = document.querySelector(".project-modal-boat");
+let island = document.querySelector(".project-modal-island");
+let xipos = island.getBoundingClientRect().x/window.outerWidth*100;
+
+let xpos = boat.getBoundingClientRect().left;
+
+let id = setInterval(frame, 10);
+function frame(){
+    if(xpos > xipos){
+        if(xpos > xipos+.5){
+            xpos -= .5;
+        }
+    }else{
+        xpos += .5;
+    }
+    boat.style.left = xpos + "vmax";
+}
+
+// For resize correction
+window.addEventListener("resize", function(){
+    xipos = (island.getBoundingClientRect().x / window.outerWidth) * 100;
+})
+
+
+
+
+
+
+
+
+
+
+
 
 // window.onload = function() {
 //     let touch = false;

@@ -151,9 +151,6 @@ body{
     top:0;
     width:100vw;
     height: 100vh;
-    /* overflow:auto; */
-    /* background-color: rgba(0, 0, 0, 0.4); */
-    /* background-color: rgba(0, 255, 255, 0.4); */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 30%, rgba(32, 184, 184, 0.4) 70%);
 
 }
@@ -176,11 +173,11 @@ body{
 
 .project-modal-container{
 
-    width:60vw;
-    height: 60vh;
-    margin-top: 20vh;
+    width:70vw;
+    height: 70vh;
+    margin-top: 10vh;
     margin-bottom: auto;
-    margin-left: 20vw;
+    margin-left: 15vw;
     margin-right: auto;
     position: relative;
     z-index: 10;
@@ -189,7 +186,7 @@ body{
     /* background-color: sandybrown; */
     box-shadow: 0 .5vmin .55vmin 0 rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    /* padding: 2vmin; */
+    padding:0;
 
 }
 
@@ -206,25 +203,117 @@ body{
     text-decoration: none;
 }
 
+.modal-wrapper{
+    margin: 0;
+    padding:0;
+}
+
+.modal-header{
+    /* background-color: #13CEDB; */
+    height:7vh;
+    padding:0;
+    /* margin-left: 16vmin; */
+    /* padding-top: 1vmin; */
+    
+}
 
 .project-modal-title{
+    position:absolute;
     text-align: left;
+    /* display: inline-block; */
     font-size: 4vmin;
     padding: 1vmin;
-    margin-top: 0px;
+    margin-top: 0;
+
     /* background-color: #13CEDB; */
+}
+
+.project-modal-header-icon {
+    position: absolute;
+    margin-left:15vmin;
+    margin-top:2vmin;
+    width: 4vmin;
+    height: 4vmin;
+    padding: 0 .8vmin;
+    transition: all 0.3s linear;
+    /* background-color: red; */
+}
+
+.project-modal-header-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: cyan;
 }
 
 .project-modal-content{
     width:100%;
-    height: 100%;
+    height: 63vh;
     margin-bottom: auto;
-    margin-top: -3vh;
+    /* margin-top: -3vmax; */
     /* background-color: red; */
+
+    padding:2vmin;
+}
+
+.project-modal-challenge-section{
+    position:absolute;
+    margin-left: 32vw;
+    top:3vh;
+}
+
+.project-modal-goal-section{
+    position:absolute;
+    margin-left: 32vw;
+    top: 32vh;
 }
 
 .project-modal-media{
+    /* background-color: purple; */
     border-radius: 1vmin;
+    width: 30vw;
+    height: 30vh;
+    margin-top:-1.5vh
+}
+
+.modal-description{
+    /* background-color: #13CEDB; */
+    width: 30vw;
+    font-size: 2vmin;
+    margin-top:-3.6vmin;
+}
+
+.modal-description-heading{
+    font-size:3vmin;
+    margin-top:-.5vmin;
+}
+
+.modal-tech-heading{
+    font-size: 3vmin;
+    margin-top: -1.4vmin;
+}
+
+.modal-tech{
+    margin-top:-3.6vmin;
+    width:30vw;
+    font-size:2vmin;
+}
+
+.modal-goal-heading{
+    font-size: 3vmin;
+}
+
+.modal-challenge-heading{
+    font-size: 3vmin;
+}
+
+.project-modal-list{
+    align-self: flex-start;
+    font-size: 2vmin;
+    /* background-color: #13CEDB; */
+    margin-top:-4vmin;
+    text-align: left;
+    padding:.5vmin;
+    margin-left:1vmin;
 }
 
 .flip{
@@ -268,30 +357,52 @@ body{
     align-items: center;
     border-radius: 1.5vmin;
     box-shadow: 0 .5vmin .55vmin 0 rgba(0, 0, 0, 0.1);
-    padding: 1vw 1vw;
+    padding: .5vw .5vw;
     background-color: #e7e6e6;
     width: 50vmin;
-    height: 70vmin;
+    height: 55vmin;
+    transition: all 0.3s;
     /* background-color: black; */
 }
 
+.project:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.project-image-container {
+    flex: 1;
+    width: 50vmin;
+    height: 40vmin;
+    border-radius: 1.5vmin;
+    max-height: 70vh;
+    transition: all 0.3s;
+    /* object-fit: contain; */
+    cursor: pointer;
+}
+
+
 .project-image{
+    position: relative;
     width:50vmin;
     height: 40vmin;
-    /* height:auto; */
+    z-index: 1;
     border-radius: 1.5vmin;
     max-height: 70vh;
     transition: all 0.3s ;
-    object-fit: contain;
-    cursor: pointer;
-    background-color: #13CEDB;
-    /* background-image: url("assets/sherlock-test.jpg"); */
-    
+    object-fit: scale-down;
 }
 
-.project-image:hover{
-    transform: scale(1.05)
-
+.project-image-blur {
+    position:absolute;
+    z-index: 0;
+    width: 50vmin;
+    height: 40vmin;
+    border-radius: 1.5vmin;
+    max-height: 70vh;
+    transition: all 0.3s;
+    object-fit: cover;
+    filter: blur(4px);
 }
 
 .project-header{
@@ -310,14 +421,6 @@ body{
     margin-right: auto;
     margin-bottom: auto;
     margin-top: 1vh;
-    transition: all 0.3s linear;
-    /* background-color: red; */
-}
-
-.project-header-title:hover {
-    color: #1fafb9;
-    cursor: pointer;
-    /* text-decoration: underline; */
 }
 
 
@@ -332,28 +435,11 @@ body{
     /* background-color: red; */
 }
 
-/* .project-header-icon-expand {
-    width: 4vmin;
-    height: 4vmin;
-    margin-right: 43%;
-    padding: 0 .8vmin;
-    margin-bottom: 0px;
-    margin-top: 1vh;
-    transition: all 0.3s linear;
-    background-color: red;
-    } */
-
 .project-header-icon:hover {
     transform: scale(1.2);
     cursor: pointer;
     color: cyan;
 }
-
-/* .project-header-icon-expand:hover {
-    transform: scale(1.2);
-    cursor: pointer;
-    color: cyan;
-} */
 
 .project-tech{
     display: flex;
@@ -374,6 +460,7 @@ body{
 .project-description{
     text-align: left;
     font-size: 2.3vmin;
+    align-self: flex-start;
     /* background-color: yellow; */
 }
 

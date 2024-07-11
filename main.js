@@ -26,7 +26,7 @@ function scrollObserver() {
                 document.querySelector("#homeNav").innerHTML = "Home";
             }
         });
-    }, {threshold: 0.3});
+    }, {threshold: 0.4});
 
     //Observer for Projects section
     let projects = document.querySelector("#projects");
@@ -38,7 +38,7 @@ function scrollObserver() {
                 document.querySelector("#projNav").innerHTML = "Projects";
             }
         });
-    }, {threshold: 0.3});
+    }, {threshold: 0.4});
 
     //Observer for Contact Me section
     let contact = document.querySelector("#contact");
@@ -50,7 +50,7 @@ function scrollObserver() {
                 document.querySelector("#conNav").innerHTML = "Contact Me";
             }
         });
-    }, {threshold: 0.3});
+    }, {threshold: 0.4});
 
     homeObserver.observe(home);
     projectsObserver.observe(projects);
@@ -70,8 +70,26 @@ let sherlockTitleOpen = document.getElementById("sherlock-title");
 
 function populateSherlockModal() {
     let title = document.querySelector(".project-modal-title");
-
     title.innerHTML = "Sherlock";
+
+    let description = document.querySelector(".modal-description");
+    description.innerHTML = "Sherlock is a cross platform mobile app built to track local crime, sexual offenders, and dangerous locations by the hour in a map view for Knox county, TN. ";
+
+    let tech = document.querySelector(".modal-tech");
+    tech.innerHTML = "Sherlock was crafted utilizing React Native for frontend development, Node.js for backend functionality, SQLite3 for robust database management, and AWS Cognito for secure user authentication and verification.";
+
+    let goals = document.getElementById("modal-goals");
+    goals.children[0].innerHTML = "Show all locally reported crime in a map view."
+    goals.children[1].innerHTML = "Train an AI model with local crime data to predict dangerous locations for map display."
+    goals.children[2].innerHTML = "Allow users to report and verify crime.";
+    goals.children[3].innerHTML = "Users can post anonymously with randomly assigned crime based display names.";
+
+    let challenges = document.getElementById("modal-challenges");
+    challenges.children[0].innerHTML = "Sherlock challenge 1";
+    challenges.children[1].children[0].innerHTML = "Sherlock challenge 1 more info";
+    challenges.children[2].innerHTML = "Sherlock challenge 2";
+    challenges.children[3].innerHTML = "Sherlock challenge 3";
+
 }
 
 sherlockOpen.onclick = function() {
@@ -91,8 +109,25 @@ let proj2TitleOpen = document.getElementById("proj2-title");
 
 function populateProj2Modal() {
     let title = document.querySelector(".project-modal-title");
-
     title.innerHTML = "Project 2";
+
+    let description = document.querySelector(".modal-description");
+    description.innerHTML = "This is a description of Project 2";
+
+    let tech = document.querySelector(".modal-tech");
+    tech.innerHTML = "This is the tech stack used for Project 2";
+
+    let goals = document.getElementById("modal-goals");
+    goals.children[0].innerHTML = "Proj 2 Goal 1";
+    goals.children[1].innerHTML = "Proj 2 Goal 2";
+    goals.children[2].innerHTML = "Proj 2 Goal 3";
+    goals.children[3].innerHTML = "Proj 2 Goal 4";
+
+    let challenges = document.getElementById("modal-challenges");
+    challenges.children[0].innerHTML = "Proj 2 Challenge 1";
+    challenges.children[1].children[0].innerHTML = "Proj 2 more info 1";
+    challenges.children[2].innerHTML = "Proj 2 Challenge 2";
+    challenges.children[3].innerHTML = "Proj 2 Challenge 3";
 }
 
 proj2Open.onclick = function() {
@@ -114,6 +149,24 @@ function populateProj3Modal() {
     let title = document.querySelector(".project-modal-title");
 
     title.innerHTML = "Project 3";
+
+    let description = document.querySelector(".modal-description");
+    description.innerHTML = "This is a description of Project 3";
+
+    let tech = document.querySelector(".modal-tech");
+    tech.innerHTML = "This is the tech stack used for Project 3";
+
+    let goals = document.getElementById("modal-goals");
+    goals.children[0].innerHTML = "Proj 3 Goal 1";
+    goals.children[1].innerHTML = "Proj 3 Goal 2";
+    goals.children[2].innerHTML = "Proj 3 Goal 3";
+    goals.children[3].innerHTML = "Proj 3 Goal 4";
+
+    let challenges = document.getElementById("modal-challenges");
+    challenges.children[0].innerHTML = "Proj 3 Challenge 1";
+    challenges.children[1].children[0].innerHTML = "Proj 3 more info 1";
+    challenges.children[2].innerHTML = "Proj 3 Challenge 2";
+    challenges.children[3].innerHTML = "Proj 3 Challenge 3";
 
 }
 

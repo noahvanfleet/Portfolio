@@ -69,20 +69,71 @@
         <img src="assets/island-svgrepo-com.svg" alt="Island" class="project-modal-island">
 
         <div class="project-modal-container">
-            <span class="project-modal-close" id="modal-close">&times;</span>
-            <h1 class="project-modal-title">Sherlock</h1>
 
-            <div class="project-modal-content">
-                <iframe class="project-modal-media" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=izDBdUXo8bGcGT5w"
+            <span class="project-modal-close" id="modal-close">&times;</span>
+            <!-- <div class="modal-wrapper"> -->
+
+                <h1 class="project-modal-title">Sherlock</h1>
+                <div class="modal-header">
+                    <!-- <a href="https://gitfront.io/r/noahvanfleet/Eap9idvXRTn6/Sherlock/" target="_blank" rel="noopener noreferrer"><img src="assets/github.svg" alt="GitHub" class="project-modal-header-icon"/></a> -->
+                    <!-- <img src="assets/black-google-play-logo-15018.svg" alt="Google Play" class="project-modal-header-icon" /> -->
+                </div>
+                
+                
+                
+                <div class="project-modal-content">
+                    <iframe class="project-modal-media" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=izDBdUXo8bGcGT5w"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            
-        </div>
-
-    </div>
-
+                    
+                    <div class="project-modal-section">
+                        <h4 class="modal-description-heading">Description</h4>
+                        <p class="modal-description" id="modal-description">Sherlock is a cross platform mobile app built to track local crime,
+                            sexual offenders, and dangerous locations by the hour
+                            in a map view for Knox county, TN.</p>
+                        </div>
+                        
+                        
+                        <div class="project-modal-section">
+                            <h4 class="modal-tech-heading">Technologies</h4>
+                            <p class="modal-tech" id="modal-tech">Sherlock was crafted utilizing React Native for frontend development, Node.js for backend functionality, SQLite3 for
+                                robust database management, and AWS Cognito for secure user authentication and verification.</p>
+                            </div>
+                            
+                            <div class="project-modal-challenge-section">
+                                <h4 class="modal-challenge-heading">Challenges</h4>
+                                <ul class="project-modal-list" id="modal-challenges">
+                                    <li>Challenge 1</li>
+                                    <ul>
+                                        <li> </li>
+                                    </ul>
+                                    <li>Challenge 2</li>
+                                    <li>Challenge 3</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="project-modal-goal-section">
+                                <h4 class="modal-goal-heading">Goals</h4>
+                                <ul class="project-modal-list" id="modal-goals">
+                                    <li>Show all locally reported crime in a map view.</li>
+                                    <li>Train an AI model with local crime data to predict dangerous locations for map display.</li>
+                                    <li>Allow users to report and verify crime.</li>
+                                    <li>Users can post anonymously with randomly assigned crime based display names.</li>
+                                </ul>
+                                
+                            </div>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                <!-- </div> -->
+                    
+                </div>
+                
+                <!-- --------------------------------------------------------- -->
+                
     <section id="projects" class="projects">
 
         <svg class="background-image flip" width="100%" height="100%" viewbox="0 0 100 100" preserveAspectRatio="none">
@@ -96,9 +147,12 @@
         <div class="project-container">
 
             <!-- Sherlock ------------------------------------------------------------------------- -->
-            <div class="project">
+            <div class="project" id="sherlock-open">
                 <!-- <img src="assets/sherlock-test.jpg" alt="Sherlock" class="project-image"> -->
-                <img src="assets/sherlock-test.jpg" alt="Sherlock" class="project-image" id="sherlock-open"/>
+                <div class="project-image-container">
+                    <img src="assets/sherlock.jpg" alt="Sherlock image blur" class="project-image-blur" />
+                    <img src="assets/sherlock.jpg" alt="Sherlock image" class="project-image" />
+                </div>
 
                 <div class="project-header">
                     <h4 class="project-header-title" id="sherlock-title">Sherlock</h4>
@@ -110,6 +164,10 @@
 
                 </div>
 
+                <div class="project-description">
+                    <p>A mobile local crime tracker</p>
+                </div>
+
                 <div class="project-tech">
                     <img src="assets/javascript.svg" alt="JavaScript" class="project-tech-icon"/>
                     <img src="assets/react.svg" alt="React" class="project-tech-icon"/>
@@ -118,32 +176,21 @@
                     <img src="assets/mysql.svg" alt="SQLite" class="project-tech-icon"/>
                 </div>
 
-                <div class="project-description">
-                    <p>Sherlock is a cross platform mobile app built to track local crime 
-                        and sexual predators by the hour
-                        in a map view for Knox county, TN. 
-                    </p>
-                    <p style="font-size: 1.8vmin;margin-top:1vmin;">
-                        The app was built using React Native with a Node.js/SQLite3
-                        backend. AWS used for user authentication and verification.
-                    </p>
-                </div>
-
             </div>
 
             <!-- QT App --------------------------------------------------------------------- -->
 
-            <div class="project">
+            <div class="project" id="proj2-open">
                 <!-- <img src="assets/sherlock-test.jpg" alt="Sherlock" class="project-image"> -->
                 
                 <!-- <iframe class="project-image" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=izDBdUXo8bGcGT5w"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-                <img src="assets/sherlock-test.jpg" alt="PROJECT 2" class="project-image" id="proj2-open"/>
+                <img src="assets/sherlock-test.jpg" alt="PROJECT 2" class="project-image"/>
 
                 <div class="project-header">
-                    <h4 class="project-header-title" id="proj2-title">Qt Application</h4>
+                    <h4 class="project-header-title" id="proj2-title">Some application</h4>
 
                     <img src="assets/github.svg" alt="GitHub" class="project-header-icon"/>
                     <img src="assets/open.svg" alt="Open External" class="project-header-icon"/>
@@ -161,28 +208,33 @@
 
             <!-- PROJECT 3 ------------------------------------------------------------------ -->
 
-            <div class="project">
+            <div class="project" id="proj3-open">
                 <!-- <img src="assets/sherlock-test.jpg" alt="Sherlock" class="project-image"> -->
             
                 <!-- <iframe class="project-image" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=izDBdUXo8bGcGT5w"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-                <img src="assets/sherlock-test.jpg" alt="PROJECT 3" class="project-image" id="proj3-open" />
+                    <!-- <img src="assets/sherlock-test.jpg" alt="PROJ 3 BLUR" class="project-image-blur" /> -->
+                    
+                    <div class="project-image-container">
+                        <img src="assets/ark-landing.png" alt="PROJECT 3" class="project-image-blur" />
+                        <img src="assets/sherlock-test.jpg" alt="PROJECT 3" class="project-image"/>
+                    </div>
 
                 <div class="project-header">
-                    <h4 class="project-header-title" id="proj3-title">Social Media Backend</h4>
+                    <h4 class="project-header-title" id="proj3-title">Malloc</h4>
 
                     <img src="assets/github.svg" alt="GitHub" class="project-header-icon"/>
                     <img src="assets/open.svg" alt="Open External" class="project-header-icon"/>
                 </div>
-            
-                <div class="project-tech">
-            
+
+                <div class="project-description">
+                    <p> A simple malloc implementation </p>
                 </div>
             
-                <div class="project-description">
-            
+                <div class="project-tech">
+                    <img src="assets/c.svg" alt="C" class="project-tech-icon" />
                 </div>
             
             </div>

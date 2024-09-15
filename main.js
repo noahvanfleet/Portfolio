@@ -189,6 +189,14 @@ window.addEventListener("click", function(event) {
     }
 });
 
+// Stops event bubbling when clicking on modal icons
+let eventsIcon = document.getElementsByClassName("project-header-icon");
+for(let i = 0; i < eventsIcon.length; i++) {
+    eventsIcon[i].addEventListener("click", function(event) {
+        event.stopPropagation();
+    });
+}
+
 // Modal boat animation
 let boat = document.querySelector(".project-modal-boat");
 let island = document.querySelector(".project-modal-island");

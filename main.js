@@ -63,7 +63,7 @@ let modal = document.getElementById("modal");
 let modalClose = document.getElementById("modal-close");
 
 modalClose.onclick = function () {modal.style.display = "none";};
-// ------------------------------------- Sherlock Modal
+// ------------------------------------- Sherlock/ Project 1 Modal
 
 let sherlockOpen = document.getElementById("sherlock-open");
 let sherlockTitleOpen = document.getElementById("sherlock-title");
@@ -102,7 +102,7 @@ sherlockTitleOpen.onclick = function() {
     modal.style.display = "block";
 }
 
-// ------------------------------------- Project 2 Modal
+// ------------------------------------- Sherlock API/ Project 2 Modal
 
 let proj2Open = document.getElementById("proj2-open");
 let proj2TitleOpen = document.getElementById("proj2-title");
@@ -140,7 +140,7 @@ proj2TitleOpen.onclick = function() {
     modal.style.display = "block";
 }
 
-// ------------------------------------- Project 3 Modal
+// ------------------------------------- Malloc/ Project 3 Modal
 
 let proj3Open = document.getElementById("proj3-open");
 let proj3TitleOpen = document.getElementById("proj3-title");
@@ -176,6 +176,45 @@ proj3Open.onclick = function() {
 }
 proj3TitleOpen.onclick = function() {
     populateProj3Modal();
+    modal.style.display = "block";
+}
+
+// ------------------------------------- Unzip/ Project 3 Modal
+
+let proj4Open = document.getElementById("proj4-open");
+let proj4TitleOpen = document.getElementById("proj4-title");
+
+function populateProj4Modal() {
+    let title = document.querySelector(".project-modal-title");
+
+    title.innerHTML = "Project 4";
+
+    let description = document.querySelector(".modal-description");
+    description.innerHTML = "This is a description of Project 4";
+
+    let tech = document.querySelector(".modal-tech");
+    tech.innerHTML = "This is the tech stack used for Project 4";
+
+    let goals = document.getElementById("modal-goals");
+    goals.children[0].innerHTML = "Proj 4 Goal 1";
+    goals.children[1].innerHTML = "Proj 4 Goal 2";
+    goals.children[2].innerHTML = "Proj 4 Goal 3";
+    goals.children[3].innerHTML = "Proj 4 Goal 4";
+
+    let challenges = document.getElementById("modal-challenges");
+    challenges.children[0].innerHTML = "Proj 4 Challenge 1";
+    challenges.children[1].children[0].innerHTML = "Proj 4 more info 1";
+    challenges.children[2].innerHTML = "Proj 4 Challenge 2";
+    challenges.children[3].innerHTML = "Proj 4 Challenge 3";
+
+}
+
+proj4Open.onclick = function() {
+    populateProj4Modal();
+    modal.style.display = "block";
+}
+proj4TitleOpen.onclick = function() {
+    populateProj4Modal();
     modal.style.display = "block";
 }
 

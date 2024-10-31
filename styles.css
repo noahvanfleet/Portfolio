@@ -19,10 +19,11 @@ body{
 /* NAV ---------------------------------------------------------------------- */
 
 .logo{
-    position: absolute;
+    position: fixed;
     margin-left: 2vw;
     margin-top: 2vh;
     font-size: 4vmin;
+    z-index: 100;
 }
 
 .header{

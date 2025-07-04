@@ -474,7 +474,7 @@ body{
 /* CONTACT ---------------------------------------------------------------------- */
 #contact{
     /* background-color: blue; */
-    font-size: 8vmin;
+    font-size: 5vmin;
     text-align: center;
     min-height: 100vh;
     min-width: 100vw;
@@ -602,8 +602,8 @@ body{
 }
 
 .contact-icon{
-    width:8vw;
-    margin-top: 2vh;
+    width:4vw;
+    margin-top: 1vh;
 }
 
 /* .contact-foot{

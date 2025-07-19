@@ -646,9 +646,10 @@ body{
         top:0;
         padding-bottom: 20vh;
     }
-        .flip {
-            margin-top: -2vh;
-        }
+
+    .flip {
+        margin-top: -3vh;
+    }
 }
 
 /* CONTACT ---------------------------------------------------------------------- */
@@ -789,6 +790,11 @@ body{
 @media screen and (max-width: 600px) {
     .contact-icon{
         width: 12vw;
+    }
+
+    .contact-title{
+        font-size: 12vmin;
+        margin-top: 5vh;
     }
 
     .contact-container{

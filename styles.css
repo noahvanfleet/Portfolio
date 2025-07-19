@@ -139,7 +139,6 @@ body{
 
 /* PROJECTS ---------------------------------------------------------------------- */
 #projects{
-    /* background-color: red; */
     word-wrap: break-word;
     font-size: 3vmin;
     min-height: 100vh;
@@ -483,6 +482,73 @@ body{
 }
 
 @media screen and (max-width: 600px) {
+    #projects{
+        font-size: 5vmin;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .project{
+        width: 80vw;
+        height: 75vh;
+        max-height: 90vh;
+        margin-bottom: 2vh;
+        padding: 1vh;
+        align-items: center;
+        align-content: center;
+    }
+
+    .project-title{
+        font-size: 8vmin;
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+    }
+
+    .project-container{
+        width:80vw;
+        max-width: 100%;
+        /* flex-direction: column; */
+    }
+
+    .project-image-container {
+        width: 80vw;
+        height: 50vh;
+        max-height: 70vh;
+        align-self: center;
+    }
+
+    .project-image-blur {
+        width:80vw;
+        height: 58vh;
+        /* max-height: 60vh; */
+    }
+
+    .project-image{
+        width: 80vw;
+        height: 58vh;
+        max-height: 70vh;
+        object-fit: contain;
+    }
+
+    .project-description{
+        font-size: 4vmin;
+        width: 85vw;
+        margin-top: 1vh;
+    }
+
+    .project-tech-icon{
+        width: 10vw;
+        height: auto;
+    }
+
+    .project-header-icon{
+        width: 8vw;
+        height: 8vw;
+    }
+
+
+
     .project-modal-container{
         width: 95vw;
         height: 95vh;

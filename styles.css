@@ -53,10 +53,6 @@ body{
     .nav-bar{
         display:none
     }
-
-    .flip{
-        margin-top:-2vh;
-    }
 }
 
 .nav-entry{
@@ -584,6 +580,9 @@ body{
         top:0;
         padding-bottom: 20vh;
     }
+        .flip {
+            margin-top: -2vh;
+        }
 }
 
 /* CONTACT ---------------------------------------------------------------------- */

@@ -14,6 +14,7 @@ body{
 .background-image {
     position: absolute;
     z-index: -100;
+    transform: scale(-1,1);
 }
 
 /* NAV ---------------------------------------------------------------------- */
@@ -53,8 +54,8 @@ body{
         display:none
     }
 
-    .background-image{
-        margin-top:-30px
+    .flip{
+        margin-top:-2vh;
     }
 }
 
@@ -90,6 +91,7 @@ body{
     align-self: center;
     width:30%;
     height:auto;
+    transform: scale(-1, 1);
 }
 
 .landing-text{
@@ -327,7 +329,7 @@ body{
 }
 
 .flip{
-    transform: scale(-1, -1);
+    transform: scale(1, -1);
     margin-left: -1.6vw;
     margin-top: -.1vh;;
 }
@@ -480,6 +482,107 @@ body{
     margin-top:0px;
 }
 
+@media screen and (max-width: 600px) {
+    .project-modal-container{
+        width: 95vw;
+        height: 95vh;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 2vh;
+        margin-bottom: auto;
+    }
+
+    .project-modal-boat{
+        z-index: 100;
+    }
+
+    .project-modal-island{
+        z-index: 100;
+    }
+
+    .project-modal-close{
+        margin-right: 5vw;
+        font-size: 10vmin;
+    }
+
+    .modal-header{
+        height: 10vh;
+        justify-content: center;
+    }
+
+    .project-modal-title{
+        font-size: 6vmin;
+        margin-left: 3vw;
+        margin-top: 2vh;
+    }
+
+    .project-modal-media{
+        width: 85vw;
+        height: 30vh;
+        align-self: center;
+        background-color: 'red';
+    }
+
+    .project-modal-content{
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        background-color: 'red';
+        flex:1;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        overflow: scroll;
+        height:90vh;
+        /* height: auto; */
+    }
+
+    .modal-description-heading{
+        font-size: 5vmin;
+    }
+
+    .modal-description{
+        font-size: 4vmin;
+        width: 85vw;
+    }
+
+    .modal-tech-heading{
+        font-size: 5vmin;
+    }
+
+    .modal-tech{
+        font-size: 4vmin;
+        width: 85vw;
+    }
+
+    .modal-challenge-heading{
+        font-size: 5vmin;
+    }
+
+    .modal-goal-heading{
+        font-size: 5vmin;
+    }
+
+    .project-modal-list{
+        font-size: 4vmin;
+        width: 85vw;
+    }
+
+    .project-modal-challenge-section{
+        position: relative;
+        margin:0;
+        top:0;
+    }
+
+    .project-modal-goal-section{
+        position: relative;
+        margin:0;
+        top:0;
+        padding-bottom: 20vh;
+    }
+}
+
 /* CONTACT ---------------------------------------------------------------------- */
 #contact{
     /* background-color: blue; */
@@ -613,6 +716,12 @@ body{
 .contact-icon{
     width:4vw;
     margin-top: 1vh;
+}
+
+@media screen and (max-width: 600px) {
+    .contact-icon{
+        width: 10vw;
+    }
 }
 
 /* .contact-foot{

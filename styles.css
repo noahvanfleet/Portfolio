@@ -788,29 +788,35 @@ body{
 
 @media screen and (max-width: 600px) {
     .contact-icon{
-        width: 10vw;
+        width: 12vw;
+    }
+
+    .contact-container{
+        width: 80vw;
+        max-width: 80%;
+        font-size: 4vmin;
+        padding: 2vw;
+        font-size: 5vmin;
+    }
+
+    .contact-label{
+        font-size: 4vmin;
+    }
+
+    .contact-input{
+        height: 5vh;
+        font-size: 4vmin;
+    }
+
+    .contact-area{
+        font-size: 4vmin;
+    }
+
+    .contact-button{
+        font-size: 5vmin;
+        padding: 2vw;
     }
 }
-
-/* .contact-foot{
-    position: absolute;
-    clip-path:inset(0 30vw 0 0);
-    overflow:hidden;
-} */
-
-/* @media only screen and (hover: none) and (pointer: coarse) and (max-width: 600px){
-
-    .contact-foot{
-        display: none;
-    }
-
-    .flip{
-        margin-top:-2vh;
-    }
-
-} */
-
-
 
 /* FOOTER ---------------------------------------------------------------------- */
 .footer{
@@ -820,6 +826,12 @@ body{
     font-size: 2vmin;
 }
 
+@media screen and (max-width: 600px) {
+    .footer{
+        font-size: 4vmin;
+    }
+    
+}
 
 
 /* GLOBAL ----------------------------------------------------------------------- */

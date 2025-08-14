@@ -15,6 +15,7 @@ body{
     position: absolute;
     z-index: -100;
     transform: scale(-1,1);
+    display: block;
 }
 
 /* NAV ---------------------------------------------------------------------- */
@@ -329,8 +330,7 @@ body{
 
 .flip{
     transform: scale(1, -1);
-    margin-left: -1.6vw;
-    margin-top: -.1vh;;
+    right:0;
 }
 
 .project-title{
@@ -645,10 +645,6 @@ body{
         margin:0;
         top:0;
         padding-bottom: 20vh;
-    }
-
-    .flip {
-        margin-top: -3vh;
     }
 }
 

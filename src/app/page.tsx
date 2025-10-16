@@ -4,6 +4,7 @@ import { Contact } from "./components/Contact";
 import Boat from "./components/Boat";
 import AnimatedBoat from "./components/AnimatedBoat";
 import path from "path";
+import Projects from "./components/Projects";
 
 export default function Home() {
 	return (
@@ -21,14 +22,14 @@ export default function Home() {
 					className="mt-[15vh] flex flex-col text-center sm:text-left"
 				>
 					<h1
-						className="text-6xl md:text-[3.8vw]"
+						className="text-6xl lg:text-[5vw]"
 					>
 						Hello, I'm
 						<span className="font-extrabold text-[#05dbfc]"> Noah</span>.
 					</h1>
 
 					<h3
-						className="text-xl md:text-[1.3vw]"
+						className="text-xl lg:text-[1.8vw]"
 					>
 						a software developer and cybersecurity enthusiast.
 					</h3>
@@ -39,13 +40,13 @@ export default function Home() {
 					className="flex gap-4 sm:gap-[1vw] items-center flex-col sm:flex-row pt-[4vw]"
 				>
 					<a href="#projects"
-						className="sm:text-nowrap sm:text-[1.2vw] sm:py-[1vw] sm:h-fit sm:px-[3vh] cursor-pointer rounded-full mt-2 border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#00ddff56] dark:hover:bg-[#282830] hover:border-transparent font-medium text-sm h-10 px-4 w-full sm:w-fit"
+						className="sm:text-nowrap md:text-[1.2vw] sm:py-[1vw] sm:h-fit sm:px-[3vh] cursor-pointer rounded-full mt-2 border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#00ddff56] dark:hover:bg-[#282830] hover:border-transparent font-medium text-sm h-10 px-4 w-full sm:w-fit"
 					>
 						Jump to projects
 					</a>
 
 					<a href="#contact"
-						className="sm:text-nowrap sm:text-[1.2vw] sm:py-[1vw] sm:h-fit sm:px-[3vh] cursor-pointer rounded-full mt-2 border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#00ddff56] dark:hover:bg-[#282830] hover:border-transparent font-medium text-sm h-10 px-4 w-full sm:w-fit"
+						className="sm:text-nowrap md:text-[1.2vw] sm:py-[1vw] sm:h-fit sm:px-[3vh] cursor-pointer rounded-full mt-2 border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#00ddff56] dark:hover:bg-[#282830] hover:border-transparent font-medium text-sm h-10 px-4 w-full sm:w-fit"
 					>
 						Contact me
 					</a>
@@ -85,11 +86,11 @@ export default function Home() {
 
 			<section 
 				id="projects"
-				className="w-full"
+				className="w-full h-fit min-h-screen flex"
 			>
 				{/* Background image */}
 				<div
-					className="w-full flex flex-col min-h-screen relative"
+					className="w-full flex flex-col min-h-screen absolute z-1"
 				>
 					<Image 
 						src="/background.svg"
@@ -101,6 +102,8 @@ export default function Home() {
 					/>
 
 				</div>
+				<Projects />
+				
 
 			</section>
 

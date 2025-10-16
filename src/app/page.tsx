@@ -2,9 +2,16 @@ import Image from "next/image";
 import Navbar from "./components/Navbar";
 import { Contact } from "./components/Contact";
 import Boat from "./components/Boat";
-import AnimatedBoat from "./components/AnimatedBoat";
-import path from "path";
 import Projects from "./components/Projects";
+import { SiLinkedin } from "react-icons/si";
+import { SiGithub, IconType } from "@icons-pack/react-simple-icons";
+import { IconType as IT } from "react-icons";
+
+const RenderIcon = ({ Icon, size = 16, className = '' }: { Icon: IconType|IT; size?: number|string; className?: string }) => (
+	<div className={`inline-block ${className}`}>
+		<Icon size={size} color='default' />
+	</div>
+)
 
 export default function Home() {
 	return (
@@ -24,7 +31,7 @@ export default function Home() {
 					<h1
 						className="text-6xl lg:text-[5vw]"
 					>
-						Hello, I'm
+						Hello, I&#39;m
 						<span className="font-extrabold text-[#05dbfc]"> Noah</span>.
 					</h1>
 
@@ -160,20 +167,14 @@ export default function Home() {
         <p className="text-xs" >Copyright © 2025 Noah Van Fleet</p>
       
 				<div
-					className='flex flex-row my-[1vw] gap-[1vw] items-center justify-center'
+					className='flex flex-row my-[1vw] gap-[2vh] items-center justify-center'
 				>
 					<a
 						href="https://github.com/noahvanfleet"
 						referrerPolicy="no-referrer"
 						target="_blank"
 					>
-						<Image
-							src={'/github.svg'}
-							alt='Github logo'
-							width={25}
-							height={25}
-							className='dark:invert'
-							/>
+							<RenderIcon Icon={SiGithub} className="dark:invert" size={'4vh'}/>
 					</a>
 
 					<a
@@ -181,13 +182,7 @@ export default function Home() {
 						referrerPolicy="no-referrer"
 						target="_blank"
 					>	
-						<Image 
-							src={'/linkedin.png'}
-							alt='LinkedIn logo'
-							width={25}
-							height={25}
-							className='dark:invert'
-						/>
+						<RenderIcon size={'4vh'} className="" Icon={SiLinkedin}  />
 					</a>
 				</div>
 			</footer>

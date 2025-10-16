@@ -2,10 +2,20 @@ import { type NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
+export type emailResponse = {
+  message?:string;
+  error?:string;
+}
+
 export async function POST(request: NextRequest) {
 		const { email, message, honeypot } = await request.json();
 
 		console.log("DATA:",email, message, honeypot)
+
+    if(!process.env.EMAIL || !process.env.EMAIL_PASSWORD){
+      console.error('ENV variables not set')
+      return NextResponse.json({ error: 'No SMTP credentials.' }, { status: 500 });
+    }
 
     const transport = nodemailer.createTransport({
     service: 'gmail',
@@ -22,6 +32,8 @@ export async function POST(request: NextRequest) {
       user: process.env.EMAIL,
       pass: process.env.EMAIL_PASSWORD,
     },
+    // logger:true,
+    // debug:true,
   });
 
   const mailOptions: Mail.Options = {

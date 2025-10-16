@@ -18,7 +18,9 @@ import {
   SiPostgresql,
   SiSupabase,
   SiGoogleplay,
+  IconType
 } from '@icons-pack/react-simple-icons'
+import { IconType as IT} from 'react-icons';
 
 const projects = [
   {
@@ -52,14 +54,14 @@ const projects = [
       { name: 'PostgreSQL', Icon: SiPostgresql },
     ],
     github: 'https://gitfront.io/r/noahvanfleet/CqaiYd1Kg8kf/Sherlock-backend/',
-    demo: 'test',
+    demo: 'https://webmap.sherlock.noahvanfleet.com',
     youtube: '',
     play:'',
   },
 ]
 
 // wrapper for icons
-const RenderIcon = ({ Icon, size = 16, className = '' }: { Icon: any; size?: number; className?: string }) => (
+export const RenderIcon = ({ Icon, size = 16, className = '' }: { Icon: IconType|IT; size?: number; className?: string }) => (
   <div className={`inline-block ${className} ${Icon==SiExpo ? 'dark:invert':''}`}>
     <Icon size={size} color='default' />
   </div>
@@ -126,7 +128,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300 hover:text-sky-500 transition-colors"
                   >
-                    <RenderIcon className='dark:invert' Icon={SiGithub} size={16} />
+                    <RenderIcon className='dark:invert hover:text-sky-500' Icon={SiGithub} size={16} />
                     GitHub
                   </a>
                 )}

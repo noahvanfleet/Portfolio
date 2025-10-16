@@ -23,7 +23,7 @@ const ThemeButton = () => {
         bg-transparent
         border-gray-200 dark:border-gray-800
         transition-colors duration-400
-        hover:bg-gray-300 dark:hover:bg-gray-700
+        hover:bg-[#e1e0e093] dark:hover:bg-gray-700
         focus:outline-none
       "
     >

@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning draggable="false">
+    <html className="no-scrollbar" lang="en" suppressHydrationWarning draggable="false">
       <body
         className={`${oswald.variable} antialiased`}
       >

@@ -1,16 +1,24 @@
 "use client"
 
 import {useForm} from 'react-hook-form'
-import { FormEvent, useEffect, useState } from 'react';
-import { sendEmail } from '../util/send-email';
-import Image from 'next/image';
-import { useTheme } from 'next-themes';
+import { useState } from 'react';
 import { BsFillSendArrowUpFill, BsFillSendCheckFill, BsFillSendExclamationFill, BsFillSendFill } from "react-icons/bs";
+import { emailResponse } from '../api/email/route';
 
 export type FormData = {
   email:string;
   message: string;
   honeypot:string;
+}
+
+async function sendMail(data:FormData){
+  return fetch('/api/email',{
+    method:'POST',
+    body:JSON.stringify(data),
+    headers:{'Content-Type':'application/json'},
+  }).then(res=>res.json()).catch((error)=>{
+    console.error(error)
+  })
 }
 
 export function Contact(){
@@ -20,20 +28,19 @@ export function Contact(){
   const [info, setInfo] = useState('')
   const [sent, setSent] = useState(false);
 
-
-
-  async function temp(delay:number){
-      return new Promise(res=>setTimeout(res, delay))
-  
-  
-    }
   async function onSubmit(data:FormData){
       setError('')
       setLoading(true)
-      await sendEmail(data).then((result:any)=>{
+      await sendMail(data).then((result:emailResponse)=>{
+        if(result.error){
+          setError(result.error);
+          console.error(result)
+        }else{
           setInfo(result.message as string)
           setSent(true)
           reset();
+        }
+        
       }).catch((error)=>{
           console.error(error)
           setError(error.error);

@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Noah Van Fleet – Portfolio Website
 
-## Getting Started
+- 🎓 Recent graduate with a degree in Computer Science. Go vols!  
 
-First, run the development server:
+## Portfolio features  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Interactive and responsive portfolio gallery  
+- Project modals with detailed descriptions, images/videos, and tech-stack badges  
+- Noah's Ark themed website to curate a unique, playful aesthetic  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend:** React, Next.js, Tailwind CSS, GSAP  
+- **Backend:** Next.js, NodeMailer  
+- **Deployment:** Docker, GitHub WebHooks, Hetzner dedicated server
+- **Version Control:** Git & GitHub  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Run locally
 
-## Learn More
+1. ### Clone the repository:  
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    git clone https://github.com/noahvanfleet/portfolio.git
+    cd Portfolio
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. ### Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash  
+    npm i
+    ```
 
-## Deploy on Vercel
+1. ### Set environment variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    You need to set environment variables in order for the contact form to work correctly.
+    Uses gmail for smtp, which requires extra steps, which can be found [here](https://www.gmass.co/blog/gmail-smtp/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+    ```bash 
+    nano .env
+
+    EMAIL=[your email]
+    EMAIL_PASSWORD=[gmail app Password]
+
+    ```
+
+1. ### Run it
+
+    ### Via NPM
+
+    ```bash  
+    npm run dev
+    ```
+
+    ### Via Docker
+
+    Environment variables can also be set here, with the -e flag.
+
+    ```bash  
+    docker build -t portfolio
+    docker run -d --name portfolio -p 3000:3000 -e EMAIL=[your email] -e EMAIL_PASSWORD=[Google app password] portfolio:latest
+    ```

@@ -1,4 +1,4 @@
-import { type NextRequest, NextResponse } from 'next/server';
+import { type NextRequest, NextResponse, userAgent } from 'next/server';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
@@ -8,16 +8,19 @@ export type emailResponse = {
 }
 
 export async function POST(request: NextRequest) {
-		const { email, message, honeypot } = await request.json();
+	const { email, message, honeypot } = await request.json();
 
-		console.log("DATA:",email, message, honeypot)
+  if(userAgent(request).isBot || honeypot.length>0){
+    return NextResponse.json({error:'Unsupported behavior detected.'}, {status:403})
+  }
 
-    if(!process.env.EMAIL || !process.env.EMAIL_PASSWORD){
-      console.error('ENV variables not set')
-      return NextResponse.json({ error: 'No SMTP credentials.' }, { status: 500 });
-    }
+	console.log("DATA:",email, message, honeypot)
+  if(!process.env.EMAIL || !process.env.EMAIL_PASSWORD){
+    console.error('ENV variables not set')
+    return NextResponse.json({ error: 'No SMTP credentials.' }, { status: 500 });
+  }
 
-    const transport = nodemailer.createTransport({
+  const transport = nodemailer.createTransport({
     service: 'gmail',
     /* 
       setting service as 'gmail' is same as providing these setings:

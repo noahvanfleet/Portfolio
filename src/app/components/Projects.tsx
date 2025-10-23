@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { FiExternalLink } from "react-icons/fi";
+import ReactMarkdown from 'react-markdown'
 
 // Import React Simple Icons components
 import {
@@ -21,6 +22,7 @@ import {
   IconType
 } from '@icons-pack/react-simple-icons'
 import { IconType as IT} from 'react-icons';
+import rehypeExternalLinks from 'rehype-external-links';
 
 const projects = [
   {
@@ -38,6 +40,7 @@ const projects = [
     demo: '',
     youtube: 'https://www.youtube.com/embed/S6PiFBkSenE?si=wOvuRXcTQdNvR9b4',
     play:'https://play.google.com/store/apps/details?id=com.sherlockknox.app&hl=en_US',
+    note:'Note that the Playstore link is currently only available for testers. Can be joined [***here***](https://play.google.com/apps/internaltest/4701406366644484490).'
   },
   {
     id: 2,
@@ -57,6 +60,7 @@ const projects = [
     demo: 'https://webmap.sherlock.noahvanfleet.com',
     youtube: '',
     play:'',
+    note:''
   },
 ]
 
@@ -91,6 +95,7 @@ export default function Projects() {
                        bg-gradient-to-br from-white/80 to-sky-50/60 dark:from-[#12131a]/90 dark:to-[#1c1e25]/90 
                        backdrop-blur-md shadow-md hover:shadow-2xl cursor-pointer overflow-hidden"
             onClick={() => {
+              // Stops scrolling on main page when in modal
               setActiveProject(project.id)
               document.body.classList.add('overflow-hidden')
             }}
@@ -178,7 +183,7 @@ export default function Projects() {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="bg-white dark:bg-gray-900 rounded-3xl p-8 w-full max-w-5xl relative overflow-y-auto max-h-[90vh]"
+              className="no-scrollbar bg-white dark:bg-gray-900 rounded-3xl p-8 w-full max-w-5xl relative overflow-y-auto max-h-[90vh]"
               onClick={(e) => e.stopPropagation()}
             >
               {projects
@@ -249,6 +254,12 @@ export default function Projects() {
                             Play Store
                           </a>
                         )}
+                      </div>
+
+                      <div 
+                        className='text-sm'
+                      >
+                        <ReactMarkdown rehypePlugins={[[rehypeExternalLinks, {target:'_blank'}]]}>{p.note}</ReactMarkdown>
                       </div>
                     </div>
                   </div>

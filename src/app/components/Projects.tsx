@@ -62,7 +62,7 @@ const projects = [
     demo: 'https://webmap.sherlock.noahvanfleet.com',
     youtube: '',
     play:'',
-    note:''
+    note: 'Please treat outputs of AI crime predictions as preliminary; improvements are ongoing for this beta feature.'
   },
 ]
 

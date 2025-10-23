@@ -19,7 +19,8 @@ import {
   SiPostgresql,
   SiSupabase,
   SiGoogleplay,
-  IconType
+  IconType,
+  SiExpress
 } from '@icons-pack/react-simple-icons'
 import { IconType as IT} from 'react-icons';
 import rehypeExternalLinks from 'rehype-external-links';
@@ -50,6 +51,7 @@ const projects = [
     thumbnail: '/sherlock-api.png',
     tech: [
       { name: 'Node.js', Icon: SiNodedotjs },
+      { name: "Express.js",Icon: SiExpress},
       { name: 'Python', Icon: SiPython },
       { name: 'TensorFlow', Icon: SiTensorflow },
       { name: 'Flask', Icon: SiFlask },
@@ -66,7 +68,7 @@ const projects = [
 
 // wrapper for icons
 export const RenderIcon = ({ Icon, size = 16, className = '' }: { Icon: IconType|IT; size?: number; className?: string }) => (
-  <div className={`inline-block ${className} ${Icon==SiExpo ? 'dark:invert':''}`}>
+  <div className={`inline-block ${className} ${Icon==SiExpo || Icon==SiExpress? 'dark:invert':''}`}>
     <Icon size={size} color='default' />
   </div>
 )

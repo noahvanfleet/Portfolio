@@ -22,7 +22,7 @@ async function sendMail(data:FormData){
 }
 
 export function Contact(){
-  const {register, handleSubmit, reset} = useForm<FormData>()
+  const {register, handleSubmit, reset, formState : {errors}} = useForm<FormData>()
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const [info, setInfo] = useState('')
@@ -70,10 +70,14 @@ export function Contact(){
           <input 
             type="email"
             placeholder="Your email"
-            className="transition-colors min-w-[57vw] md:min-w-[30vw] duration-300 md:text-[2vw] flex outline-none focus:border-[#00ddff56] focus:shadow-md border-2 rounded-lg p-2 border-solid border-black/[.08] dark:border-white/[.145]"
+            className={`transition-colors min-w-[57vw] md:min-w-[30vw] duration-300 md:text-[2vw] flex outline-none focus:border-[#00ddff56] focus:shadow-md border-2 rounded-lg p-2 border-solid 
+              ${errors.email ? 'border-red-400':'border-black/[.08] dark:border-white/[.145]'}`}
             enterKeyHint="next"
-            {...register('email', {required:true})}
+            {...register('email', {required:'Email is required'})}
           />
+          {errors.email && (
+            <span className="text-red-400 md:text-[1.8vw] mt-1 pl-[0.5vw]">{errors.email.message}</span>
+          )}
         </div>
         <div className="flex flex-col max-w-full">
             <label
@@ -86,11 +90,15 @@ export function Contact(){
             <textarea
                 rows={4}
                 placeholder="Type your message"
-                className="transition-colors min-w-[57vw] md:min-w-[30vw] duration-300 md:text-[2vw] outline-none focus:border-[#00ddff56] focus:shadow-md resize-none p-2 border-2 rounded-lg border-solid border-black/[.08] dark:border-white/[.145]"
+                className={`transition-colors min-w-[57vw] md:min-w-[30vw] duration-300 md:text-[2vw] outline-none focus:border-[#00ddff56] focus:shadow-md resize-none p-2 border-2 rounded-lg border-solid
+                  ${errors.message ? 'border-red-400' :'border-black/[.08] dark:border-white/[.145]'}`}
                 enterKeyHint="send"
-                {...register('message',{required:true})}
+                {...register('message',{required:'A message is required'})}
             >
             </textarea>
+            {errors.message && (
+              <span className="text-red-400 md:text-[1.8vw] mt-1 pl-[0.5vw]">{errors.message.message}</span>
+            )}
         </div>
 
 		  	{/* Honey pot for bot detection */}

@@ -164,7 +164,7 @@ export default function Home() {
 			</section>
 
       <footer className="flex-wrap items-center justify-center overflow-hidden text-center z-10 pb-[5vh]">
-        <p className="text-xs" >Copyright © 2025 Noah Van Fleet</p>
+        <p className="text-xs" >Copyright © 2026 Noah Van Fleet</p>
       
 				<div
 					className='flex flex-row my-[1vw] gap-[2vh] items-center justify-center'
